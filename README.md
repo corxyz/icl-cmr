@@ -2,6 +2,8 @@
 
 This repository is the official implementation of "Linking In-context Learning in Transformers to Human Episodic Memory". 
 
+![Comparison of composition mechanisms of induction heads and CMR](figs/comparison.png)
+
 ## Requirements
 
 To install requirements:
