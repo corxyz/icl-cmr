@@ -1,0 +1,6 @@
+huggingface-hub==0.20.3
+joblib==1.2.0
+numpy==1.26.4
+scipy==1.13.0
+torch==2.2.1
+transformer-lens==1.17.0
