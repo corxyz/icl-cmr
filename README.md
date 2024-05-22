@@ -2,8 +2,6 @@
 
 This repository is the official implementation of [Linking In-context Learning in Transformers to Human Episodic Memory](https://arxiv.org/abs/2030.12345). 
 
-![Tux, the Linux mascot](/figs/comparison.png)
-
 ## Requirements
 
 To install requirements:
