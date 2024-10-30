@@ -49,14 +49,14 @@ crp_range = np.arange(-max_dist, max_dist+1)
 # Model fitting
 ########################################
 
-def fit_over_time():
+def fit_over_time(model_name, file_prefix):
   cps = list(range(0, n_cp, cp_interv)) + [n_cp - 1]
   mses, params, scale_factors = None, None, None
   copy_scores, head_scores = None, None
   labels = None
 
   for i, cp in enumerate(cps):
-    all_head_scores = joblib.load('./saved_scores/{}/{}{}.pkl'.format(model_name, file_predix, cp))
+    all_head_scores = joblib.load('./saved_scores/{}/{}{}.pkl'.format(model_name, file_prefix, cp))
     n_layers, n_heads = all_head_scores['sorted_labels'].shape
     attn_scores = load_scores_in_range(all_head_scores, 'sorted_CRP_scores', select_range=select_range)
     fit_res = fit(attn_scores)
@@ -200,10 +200,10 @@ if __name__ == '__main__':
   # parse command line arguments
   args = parser.parse_args()
   model_name = args.model_name
-  file_predix = 'all_scores_' + '_'.join(model_name.split('-')[:2]) + '_cp'
+  file_prefix = 'all_scores_' + '_'.join(model_name.split('-')[:2]) + '_cp'
 
   # fit all average attention scores for each head over training
-  fit_res = fit_over_time()
+  fit_res = fit_over_time(model_name, file_prefix)
   mses = fit_res['fitted_MSE']
   params = fit_res['fitted_params']
   scale_factors = fit_res['fitted_scale_factors']
