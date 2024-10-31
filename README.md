@@ -142,3 +142,16 @@ We used the pre-trained models from [TransformerLens](https://github.com/Transfo
 - Qwen-7b
 - Mistral-7b
 - Llama3-8b
+
+## Citation
+
+We recommend citing this paper as follows (bibtex)
+
+```
+@inproceedings{JiAn2024ICLCMR,
+  title={Linking In-context Learning in Transformers to Human Episodic Memory},
+  author={Li Ji-An and Corey Y Zhou and Marcus K Benna and Marcelo G Mattar},
+  booktitle= {Advances in Neural Information Processing Systems 38: Annual Conference on Neural Information Processing Systems 2024, December 10-15, 2024, Vancouver, BC, {Canada}},
+  year={2024}
+}
+```
